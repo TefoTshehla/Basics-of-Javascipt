@@ -5,16 +5,17 @@
         <link rel="stylesheet" href="style/style.css">  
     </head>
 <body>
-    <p>Schedule Planner</p>
-
-    <div class="todo-input-grid">
-    <input placeholder="Todo name" class="js-name-input">
-    <input type="date" class="date-style">
-    <button onclick="
-    addTodo();
-    " class="add-style">Add</button>
+    <div class="container">
+        <p>Schedule Planner</p>
+        <div class="todo-input-grid">
+            <input placeholder="Todo name" class="js-name-input">
+            <input type="date" class="date-style">
+            <button onclick="
+            addTodo();
+            " class="add-style">Add</button>
+        </div>
+        <div class="js-todo-list todo-grid"></div>
     </div>
-    <div class="js-todo-list todo-grid"></div>
     <!--instead of writing all the html by hand we loop through an array and use javascript-->
     <script src="scripts/to-do-list.js"></script>
 </body>

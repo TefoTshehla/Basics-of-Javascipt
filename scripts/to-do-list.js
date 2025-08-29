@@ -1,4 +1,3 @@
-
 let todoList;
 
 try{
@@ -16,19 +15,10 @@ try{
       {name: 'wash dishes', dueDate: '2025-05-22'}];
 }
 
-
-//Save the data as an array
-//const todoList = ['make dinner', 'wash dishes'];  
-
-/*
-let todoList = JSON.parse(localStorage.getItem('todoList')) || ['make dinner', 'wash dishes'];
-*/
-
 renderTodoList();
 
 function renderTodoList(){
     let todoListHtml = '';
-
     //Generating the html 
     //loop through an array
     for(let i=0; i<todoList.length; i++){
@@ -51,7 +41,6 @@ function renderTodoList(){
     }
     //console.log(todoListHtml);
 document.querySelector('.js-todo-list').innerHTML = todoListHtml;
-
 }
 
 const inputField = document.querySelector('.js-name-input');
@@ -68,7 +57,6 @@ function addTodo(){
   
   const name = inputElement.value;
   const dueDate = dateInput.value;
-
   //before pushing check validation
   if(name.trim() !==''){
     todoList.push({
@@ -78,7 +66,6 @@ function addTodo(){
   }
   
   console.log(todoList);
-
   //clear the input field
   inputElement.value = '';
   dateInput.value = '';
@@ -87,9 +74,6 @@ function addTodo(){
   renderTodoList();
 }
 
-
-
 function saveTostorage(){
   localStorage.setItem('todoList', JSON.stringify(todoList));
 }
-

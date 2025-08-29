@@ -1,47 +1,85 @@
 body {
-  background-color:pink;
+  background-color: #fdf6f0;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 20px;
   font-weight: bold;
+  /*place at center*/
+  display: flex;
+  justify-content: center; /*horizontally*/
+  align-items: center; /*vertically*/
+  height: 100vh; /*full screen height*/
+  margin: 0; /*remove default spacing*/
 }
 
-.js-name-input{
-  background-color: aqua;
+.container{
+  background: white;
+  text-align: center; /*makes text and inputs centered*/
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  width: 350px;
+}
+
+.container p{
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.js-name-input, .date-style{
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
 .todo-input-grid {
   display: grid;
-  grid-template-columns: 100px 100px 100px;
+  grid-template-columns: 1fr 1fr auto;
   gap: 10px;
   margin-bottom: 20px;
-  
 }
+
 .date-style{
   background-color: blueviolet;
 }
 
 .todo-grid {
   display: grid;
-  row-gap: 10px;
+  row-gap: 12px;
 }
 
 .todo-item {
   display: grid;
-  grid-template-columns: 100px 100px 80px;
+  grid-template-columns: 1fr 1fr auto;
   align-items: center;
   gap: 10px;
- 
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
 }
 
-
-.butt-grid{
-  background-color: red;
-  color: white;
-   border: none;
+.add-style, .butt-grid{
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .add-style{
-  background-color: red;
+  background-color: #28a745;
   color: white;
-  border: none;
+}
+
+.add-style:hover{
+  background-color: #218838;
+}
+
+.butt-grid{
+  background-color: #dc3545;
+  color: white;
+}
+
+.butt-grid:hover{
+  background-color: #c82333;
 }
